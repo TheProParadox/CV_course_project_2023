@@ -38,8 +38,6 @@ class upmodel(nn.Module):
   def forward(self,inp):
     x = torch.zeros(inp.shape[0],inp.shape[1],2*inp.shape[2],2*inp.shape[3]).float().cuda()
     x[:,:,::2,::2] = inp
-    #print(x)
-    # Without using maxUnpool3d
     x1 = self.conv1(x)
     x1 = self.relu(x1)
     x1 = self.conv2(x1)

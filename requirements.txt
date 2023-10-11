@@ -4,3 +4,5 @@ pytorch
 scipy
 matplotlib
 imageio
+scipy
+pandas
